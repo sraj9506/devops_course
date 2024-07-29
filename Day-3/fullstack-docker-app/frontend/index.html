@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Hello from Nginx and Docker!</h1>
+    <p>This is a simple static front-end served by Nginx.</p>
+	<a href="http://172.23.0.3:3000/data">Click me</a>
+</body>
+</html>
+<script>
+window.onload=()=>{
+	fetch("http://172.23.0.3:3000/data")
+  .then(response => response.json())
+  .then(data => console.log(data));
+}
+</script>
