@@ -1,0 +1,12 @@
+- hosts: all
+  tasks:
+    - name: Trying To Start Nginx
+      block:
+        - service:
+            name: nginx
+            state: started
+        - debug: msg="Nginx Succesfully Started"
+      
+      rescue:
+        - debug: msg="Nginx Failed To Start"
+

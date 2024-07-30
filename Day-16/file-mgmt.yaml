@@ -1,0 +1,19 @@
+- hosts: web
+  become: yes
+  tasks:
+    - name: Create File
+      file:
+        path: /tmp/new_file.txt
+        state: touch
+        mode: 0644
+
+    - name: Modify File
+      lineinfile:
+        path: /tmp/new_file.txt
+        line: 'This is new file which is being modified by ansible !!'
+        create: yes
+
+    - name: Delete File
+      file:
+        path: /tmp/new_file.txt
+        state: absent
