@@ -10,6 +10,3 @@
 [submodule "Day-6"]
 	path = Day-6
 	url = https://github.com/sraj9506/Day-6.git
-[submodule "flask-k8s-project"]
-	path = flask-k8s-project
-	url = https://github.com/sraj9506/flask-k8s-project.git
