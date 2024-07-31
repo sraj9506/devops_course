@@ -2,7 +2,7 @@
 
 #### Project Overview
 
-In this project, you\'ll go through all three lifecycles of Docker:
+In this project, you'll go through all three lifecycles of Docker:
 pulling an image and creating a container, modifying the container and
 creating a new image, and finally, creating a Dockerfile to build and
 deploy a web application.
@@ -14,21 +14,21 @@ as a container.
 
 Steps:
 
-Pull the Nginx Image:\
+Pull the Nginx Image:
 
 
 ![](.//media/image1.png)
 
-Run the Nginx Container:\
+Run the Nginx Container:
 ![](.//media/image2.png)
 
-\--name my-nginx: Assigns a name to the container.
+--name my-nginx: Assigns a name to the container.
 
 -d: Runs the container in detached mode.
 
 -p 8080:80: Maps port 8080 on your host to port 80 in the container.
 
-Verify the Container is Running:\
+Verify the Container is Running:
 
 
 ![](.//media/image3.png)
@@ -42,7 +42,7 @@ page and create a new image from this modified container.
 
 Steps:
 
-Access the Running Container:\
+Access the Running Container:
 
 
 ![](.//media/image5.png)
@@ -51,8 +51,8 @@ Here -it means interactive terminal mode so that we can give input
 inside container and /bin/bash is for launching bash shell inside
 container.
 
-Create a Custom HTML Page:\
-\
+Create a Custom HTML Page:
+
 ![](.//media/image6.png)
 Exit the Container:
 
@@ -62,7 +62,7 @@ Commit the Changes to Create a New Image:
 
 ![](.//media/image8.png)
 
-Run a Container from the New Image:\
+Run a Container from the New Image:
 ![](.//media/image9.png)
 
 Verify the New Container:
@@ -94,12 +94,12 @@ Write the Dockerfile:
 
 ![](.//media/image13.png)
 
-Build the Docker Image:\
+Build the Docker Image:
 
 
 ![](.//media/image14.png)
 
-Run a Container from the Built Image:\
+Run a Container from the Built Image:
 ![](.//media/image15.png)
 
 Verify the Web Application:
@@ -113,17 +113,17 @@ environment.
 
 Steps:
 
-Stop and Remove the Containers:\
+Stop and Remove the Containers:
 ![](.//media/image17.png)
 
-Remove the Images:\
+Remove the Images:
 ![](.//media/image18.png)
 
 Docker Project 02
 
 #### Project Overview
 
-In this advanced project, you\'ll build a full-stack application using
+In this advanced project, you'll build a full-stack application using
 Docker. The application will consist of a front-end web server (Nginx),
 a back-end application server (Node.js with Express), and a PostgreSQL
 database. You will also set up a persistent volume for the database and
@@ -137,11 +137,11 @@ configuration files.
 
 Steps:
 
-Create the Project Directory:\
-\
+Create the Project Directory:
+
 ![](.//media/image19.png)
 
-Create Subdirectories for Each Service:\
+Create Subdirectories for Each Service:
 ![](.//media/image20.png)
 
 Create Shared Network and Volume:
@@ -173,10 +173,10 @@ following content:
 
 Build the PostgreSQL Image:
 
-![](.//media/image24.png)\
+![](.//media/image24.png)
 
 
-\
+
 
 
 Run the PostgreSQL Container:
@@ -191,10 +191,10 @@ Steps:
 Initialize the Node.js
 Application:![](.//media/image28.png)
 
-Install Express and pg (PostgreSQL client for Node.js):\
+Install Express and pg (PostgreSQL client for Node.js):
 
 
-![](.//media/image29.png)\
+![](.//media/image29.png)
 Create the Application Code:
 
 In the backend directory, create a file named index.js with the
@@ -205,13 +205,13 @@ Create a Dockerfile for the Backend:
 In the backend directory, create a file named Dockerfile with the
 following content:![](.//media/image31.png)
 
-Build the Backend Image:\
+Build the Backend Image:
 ![](.//media/image32.png)
 
 ![](.//media/image33.png){width="6.268055555555556in"
 height="0.15347222222222223in"}
 
-Run the Backend Container:\
+Run the Backend Container:
 ![](.//media/image34.png)
 
 ### Part 4: Setting Up the Frontend (Nginx)
@@ -233,10 +233,10 @@ following content:
 
 ![](.//media/image36.png)
 
-Build the Frontend Image:\
+Build the Frontend Image:
 ![](.//media/image37.png)
 
-Run the Frontend Container:\
+Run the Frontend Container:
 ![](.//media/image38.png)
 Part 5: Connecting the Backend and Database
 
@@ -252,7 +252,7 @@ correctly as written above.
 
 Verify Backend Communication:
 
-Access the backend container:\
+Access the backend container:
 ![](.//media/image39.png)
 
 ![](.//media/image40.png)Test the connection to the database using
@@ -293,11 +293,11 @@ volumes to clean up your environment.
 
 Steps:
 
-![](.//media/image46.png)Stop and Remove the Containers:\
+![](.//media/image46.png)Stop and Remove the Containers:
 
 
-Remove the Images:\
-\
+Remove the Images:
+
 ![](.//media/image47.png)Remove the Network and Volume:
 
 ![](.//media/image48.png)
