@@ -7,3 +7,6 @@
 [submodule "Day-12"]
 	path = Day-12
 	url = https://github.com/sraj9506/Day-12
+[submodule "Day-15"]
+	path = Day-15
+	url = https://github.com/sraj9506/Day-15
