@@ -1,0 +1,23 @@
+---
+- name: Start services and ensure Node.js is installed
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Start Nginx
+    service:
+      name: nginx
+      state: started
+
+  - name: Start MySQL
+    service:
+      name: mysql
+      state: started
+
+  - name: Ensure Node.js is installed
+    apt:
+      name: nodejs
+      state: present
+
+
+
