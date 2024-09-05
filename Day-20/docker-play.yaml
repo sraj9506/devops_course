@@ -1,0 +1,15 @@
+- hosts: localhost
+  tasks:
+    - name: Pull the latest nginx image
+      community.docker.docker_image:
+        name: nginx
+        source: pull
+
+    - name: Start an NGINX container
+      community.docker.docker_container:
+        name: my_nginx
+        image: nginx
+        state: started
+        ports:
+          - "80:80"
+

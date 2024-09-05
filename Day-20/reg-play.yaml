@@ -1,0 +1,17 @@
+---
+- name: Handle Task Failure
+  hosts: all
+  tasks:
+    - name: Run a command that may fail
+      command: /bin/false
+      ignore_errors: yes
+      register: result
+
+    - name: Print the result
+      debug:
+        var: result
+
+    - name: Fail if the command failed
+      fail:
+        msg: "The command failed with return code {{ result.rc }}"
+      when: result.rc != 0

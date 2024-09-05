@@ -1,0 +1,9 @@
+- hosts: localhost
+  tasks:
+    - name: Launch an EC2 instance
+      community.aws.ec2_instance:
+        key_name: my-key
+        instance_type: t2.micro
+        image_id: ami-085f9c64a9b75eed5
+        wait: yes
+        count: 1

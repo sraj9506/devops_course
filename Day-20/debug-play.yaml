@@ -1,0 +1,13 @@
+---
+- name: Ensure Variables are Defined
+  hosts: all
+  tasks:
+    - name: Check if my_var is defined
+      debug:
+        msg: "The value of my_var is {{ my_var }}"
+      when: my_var is defined
+
+    - name: Fail if my_var is not defined
+      fail:
+        msg: "my_var is not defined!"
+      when: my_var is not defined
